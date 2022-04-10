@@ -28,9 +28,9 @@ public class WebCameraScript : MonoBehaviour
     {
 
         webCamTexture.GetPixels32(base32); //Webカメラの画像データを代入 
-        for (int x = 0; x < width; x++)
+        for (int x = 0; x < webCamTexture.width; x++)
         {
-            for (int y = 0; y < height; y++)
+            for (int y = 0; y < webCamTexture.height; y++)
             {
                 Color32 c32 = base32[x + y * webCamTexture.width];
                 if (Near_Color_Chack_RGB(c32)) pixelData[x, y] = 1; //そのピクセルが肌に近ければ1をマーク   
