@@ -23,31 +23,31 @@ public class WebCameraScript : MonoBehaviour
         webCamTexture.Play();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    //// Update is called once per frame
+    //void Update()
+    //{
 
-        webCamTexture.GetPixels32(base32); //Webカメラの画像データを代入 
-        for (int x = 0; x < webCamTexture.width; x++)
-        {
-            for (int y = 0; y < webCamTexture.height; y++)
-            {
-                Color32 c32 = base32[x + y * webCamTexture.width];
-                if (Near_Color_Chack_RGB(c32)) pixelData[x, y] = 1; //そのピクセルが肌に近ければ1をマーク   
-                else pixelData[x, y] = 0;
-            }
-        }
+    //    webCamTexture.GetPixels32(base32); //Webカメラの画像データを代入 
+    //    for (int x = 0; x < webCamTexture.width; x++)
+    //    {
+    //        for (int y = 0; y < webCamTexture.height; y++)
+    //        {
+    //            Color32 c32 = base32[x + y * webCamTexture.width];
+    //            if (Near_Color_Chack_RGB(c32)) pixelData[x, y] = 1; //そのピクセルが肌に近ければ1をマーク   
+    //            else pixelData[x, y] = 0;
+    //        }
+    //    }
 
-        bool Near_Color_Chack_RGB(Color32 c)
-        { // RGB判定
-            if (Byte_Distance(c.r, mask.r) < rgb_aria)
-            {
-                if (Byte_Distance(c.g, mask.g) < rgb_aria)
-                {
-                    if (Byte_Distance(c.b, mask.b) < rgb_aria) return true;
-                }
-            }
-            return false;
-        }
-    }
+    //    bool Near_Color_Chack_RGB(Color32 c)
+    //    { // RGB判定
+    //        if (Byte_Distance(c.r, mask.r) < rgb_aria)
+    //        {
+    //            if (Byte_Distance(c.g, mask.g) < rgb_aria)
+    //            {
+    //                if (Byte_Distance(c.b, mask.b) < rgb_aria) return true;
+    //            }
+    //        }
+    //        return false;
+    //    }
+    //}
 }
