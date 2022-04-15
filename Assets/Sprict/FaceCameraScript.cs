@@ -53,6 +53,8 @@
 			processor.Performance.SkipRate = 0;             // we actually process only each Nth frame (and every frame for skipRate = 0)
 		}
 
+		//＝＝＝＝＝ここまでFaceDetectorScene.csからのコピペ＝＝＝＝＝
+
 		/// <summary>
 		///フレームごとのビデオキャプチャプロセッサ
 		protected override bool ProcessTexture(WebCamTexture input, ref Texture2D output)
@@ -92,5 +94,4 @@
 			return result;
 		}
 	}
-
 }
