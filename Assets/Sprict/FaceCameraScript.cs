@@ -70,11 +70,11 @@
 																	// (出力が有効なテクスチャである場合、そのバッファは再利用されます。そうでない場合、再作成されます。)
 			return true;
 		}
-	}
+     }
 
-	public class TrimmingTexture
-	{
-		private Vector2Int pointRightTop;
+    public class TrimmingTexture
+	{ 
+        private Vector2Int pointRightTop;
 		private Vector2Int pointLeftBottom;
 		private Texture2D inputTex;
 		public TrimmingTexture(Vector2Int pointRightTop, Vector2Int pointLeftBottom, Texture2D inputTex)
